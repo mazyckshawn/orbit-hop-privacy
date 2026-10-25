@@ -1,5 +1,5 @@
 Orbit Hop Privacy Policy
-Last updated: October 10, 2026
+Last updated: October 25, 2026
 
 Orbit Hop ("the app") is developed by Shawn Mazyck ("we", "us"). This policy explains what the app collects and why.
 
