@@ -23,5 +23,5 @@ Delete all locally stored data by uninstalling the app.
 Changes
 We will update this page when the policy changes and update the date above.
 
-Contact
-mazyckshawn@gmail.com
+## Contact
+orbithopsupport@gmail.com
