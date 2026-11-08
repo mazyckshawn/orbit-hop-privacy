@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Orbit Hop · Privacy Policy</title>
+<meta name="description" content="Privacy policy for Orbit Hop: Space Arcade. What the app collects, why, and your choices.">
+<meta name="theme-color" content="#0b0f1f">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="canonical" href="https://mazyckshawn.github.io/orbit-hop-privacy/">
+<meta property="og:title" content="Orbit Hop · Privacy Policy">
+<meta property="og:description" content="What Orbit Hop collects, why, and your choices.">
+<meta property="og:image" content="https://mazyckshawn.github.io/orbit-hop-privacy/icon.png">
+<style>
+  @font-face { font-family: "Fredoka"; font-weight: 500; font-display: swap; src: url(fredoka-latin-500-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Fredoka"; font-weight: 600; font-display: swap; src: url(fredoka-latin-600-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Fredoka"; font-weight: 700; font-display: swap; src: url(fredoka-latin-700-normal.woff2) format("woff2"); }
+
+  :root {
+    --space: #0b0f1f;
+    --nebula: #1d1650;
+    --ink: #1b1435;
+    --card: #232a63;
+    --card-hi: #2f3784;
+    --line: #3a4590;
+    --text: #fff8ec;
+    --muted: #aab2ea;
+    --comet: #ffc94d;
+    --comet-lo: #f09a1f;
+    --gem: #4fe3d0;
+    --hazard: #ff5a6e;
+    --font: "Fredoka", "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    min-height: 100vh;
+    background: var(--space);
+    color: var(--text);
+    font-family: var(--font);
+    font-weight: 500;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Space backdrop: nebula glow, a ringed planet, an orbit with a comet, and stars. */
+  .sky { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden;
+    background:
+      radial-gradient(ellipse 80% 55% at 50% 0%, #3a2a8a 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 100% 100%, rgba(31,179,162,.18) 0%, transparent 70%),
+      linear-gradient(180deg, var(--nebula) 0%, var(--space) 60%); }
+  .stars, .stars::after { position: absolute; inset: -50%; background-repeat: repeat;
+    background-image:
+      radial-gradient(1.5px 1.5px at 20px 30px, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 120px 80px, #fff 50%, transparent 51%),
+      radial-gradient(2px 2px at 220px 150px, #fff8ec 50%, transparent 51%),
+      radial-gradient(1px 1px at 300px 40px, #aab2ea 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 60px 210px, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 170px 260px, #fff 50%, transparent 51%);
+    background-size: 340px 300px; opacity: .55; }
+  .stars::after { content: ""; inset: 0; background-size: 520px 460px; opacity: .6; animation: twinkle 6s ease-in-out infinite alternate; }
+  @keyframes twinkle { from { opacity: .25; } to { opacity: .75; } }
+  .planet { position: absolute; width: 180px; height: 180px; right: -40px; top: 120px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #5fd3c4, #2a9a92 55%, #1a6b6e);
+    box-shadow: inset -18px -14px 0 rgba(0,0,0,.18); opacity: .55; }
+  .planet::after { content: ""; position: absolute; left: -45px; right: -45px; top: 72px; height: 36px; border-radius: 50%;
+    border: 8px solid #d9a73a; transform: rotate(-16deg); opacity: .85; }
+  .orbit { position: absolute; left: -160px; bottom: -160px; width: 420px; height: 420px; border-radius: 50%;
+    border: 2px dashed rgba(170,178,234,.25); }
+  .orbit::after { content: ""; position: absolute; width: 18px; height: 18px; border-radius: 50%; top: 50%; left: 50%;
+    margin: -9px; background: var(--comet); box-shadow: 0 0 14px 4px rgba(255,201,77,.55);
+    transform: rotate(0deg) translateX(210px); animation: orbit 14s linear infinite; }
+  @keyframes orbit { to { transform: rotate(360deg) translateX(210px); } }
+  @media (prefers-reduced-motion: reduce) { .orbit::after, .stars::after { animation: none; } }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: max(28px, env(safe-area-inset-top)) 16px 48px; }
+
+  header { text-align: center; padding: 18px 0 26px; }
+  .icon { width: 108px; height: 108px; border-radius: 26px; display: block; margin: 0 auto 16px;
+    box-shadow: 0 0 0 5px var(--ink), 0 14px 40px rgba(255,201,77,.28); }
+  .brand { font-weight: 700; font-size: clamp(40px, 9vw, 62px); line-height: 1; letter-spacing: .5px;
+    color: var(--text); -webkit-text-stroke: 6px var(--ink); paint-order: stroke fill; text-shadow: 0 5px 0 var(--ink); }
+  .brand b { color: var(--comet); }
+  .title { margin-top: 14px; display: inline-block; font-weight: 700; font-size: 20px; color: var(--ink);
+    background: linear-gradient(var(--gem) 0 50%, #2fcbb8 50%); padding: 6px 20px 8px; border-radius: 999px;
+    box-shadow: 0 0 0 3px var(--ink), 0 5px 0 var(--ink); }
+  .updated { margin-top: 16px; color: var(--muted); font-size: 15px; }
+
+  .card { position: relative; background: linear-gradient(180deg, var(--card-hi) 0%, var(--card) 38%);
+    border-radius: 22px; padding: 22px 22px 20px; margin: 0 0 18px;
+    box-shadow: 0 0 0 3px var(--ink), 0 7px 0 var(--ink), 0 18px 40px rgba(0,0,0,.35); }
+  .card h2 { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 23px; line-height: 1.2; margin-bottom: 10px; color: var(--text); }
+  .badge { flex: 0 0 auto; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
+    background: var(--ink); box-shadow: inset 0 0 0 2px var(--line); }
+  .badge svg { width: 24px; height: 24px; }
+  .card p, .card li { color: #e6e8ff; font-size: 17px; }
+  .card p + p { margin-top: 10px; }
+  .lead { font-size: 18px; }
+  .big-no { font-weight: 700; color: var(--gem); font-size: 20px; }
+
+  .service { margin-top: 14px; padding: 14px 16px; border-radius: 16px; background: rgba(27,20,53,.55); box-shadow: inset 0 0 0 2px var(--line); }
+  .service:first-of-type { margin-top: 4px; }
+  .service h3 { font-weight: 700; font-size: 18px; color: var(--comet); margin-bottom: 4px; }
+  .service h3 span { color: var(--muted); font-weight: 600; font-size: 15px; }
+
+  ul.choices { list-style: none; padding: 0; margin-top: 4px; }
+  ul.choices li { position: relative; padding-left: 30px; margin-top: 8px; }
+  ul.choices li::before { content: ""; position: absolute; left: 4px; top: .55em; width: 13px; height: 13px; transform: rotate(45deg);
+    background: var(--comet); border-radius: 3px; box-shadow: 0 0 0 2px var(--ink); }
+
+  a { color: var(--gem); font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; word-break: break-word; }
+  a:hover { color: #8ff3e6; }
+  a:focus-visible { outline: 3px solid var(--comet); outline-offset: 3px; border-radius: 6px; }
+
+  .contact { text-align: center; }
+  .btn { display: inline-block; margin-top: 12px; padding: 12px 26px 14px; border-radius: 999px; text-decoration: none;
+    font-weight: 700; font-size: 18px; color: var(--ink); background: linear-gradient(#ffe08a 0 48%, var(--comet) 48%);
+    box-shadow: 0 0 0 3px var(--ink), 0 6px 0 var(--ink); word-break: normal; }
+  .btn:hover { color: var(--ink); transform: translateY(-1px); }
+  .btn:active { transform: translateY(3px); box-shadow: 0 0 0 3px var(--ink), 0 3px 0 var(--ink); }
+
+  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 26px; }
+  footer a { color: var(--muted); }
+
+  @media (max-width: 480px) {
+    .card { padding: 18px 16px 16px; border-radius: 18px; }
+    .card h2 { font-size: 20px; }
+    .card p, .card li { font-size: 16px; }
+    .planet { width: 120px; height: 120px; right: -50px; top: 90px; }
+    .planet::after { top: 46px; height: 26px; left: -32px; right: -32px; border-width: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true"><div class="stars"></div><div class="planet"></div><div class="orbit"></div></div>
+
+<main class="wrap">
+  <header>
+    <img class="icon" src="icon.png" alt="Orbit Hop app icon" width="108" height="108">
+    <h1 class="brand">Orbit <b>Hop</b></h1>
+    <div class="title">Privacy Policy</div>
+    <p class="updated">Last updated: October 25, 2026</p>
+  </header>
+
+  <section class="card">
+    <p class="lead">Orbit Hop (“the app”) is developed by Shawn Mazyck (“we”, “us”). This policy explains what the app collects and why.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#4fe3d0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>What we collect directly</h2>
+    <p><span class="big-no">Nothing.</span> The app has no accounts, no sign-in, and does not send your scores or settings anywhere. Your best scores and times, Diamonds, Stardust, level progress, badges, unlocked items and settings are stored only on your device.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#ffc94d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2" fill="#ffc94d" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-25 12 12)"/></svg></span>Third-party services</h2>
+
+    <div class="service">
+      <h3>Google AdMob <span>· advertising</span></h3>
+      <p>The app shows ads through Google AdMob. AdMob may collect your device’s advertising identifier, IP address, approximate location derived from IP, and app usage data to serve and measure ads. Where required by law (for example in the EU, UK and certain US states) you will see a consent prompt and can decline personalized ads. On iOS you can also decline tracking in the App Tracking Transparency prompt or under Settings → Privacy → Tracking. Google’s policy: <a href="https://policies.google.com/technologies/ads" rel="noopener">https://policies.google.com/technologies/ads</a></p>
+    </div>
+
+    <div class="service">
+      <h3>RevenueCat <span>· purchases</span></h3>
+      <p>If you buy “Remove Ads” or a Diamond pack, RevenueCat processes the purchase receipt with Apple or Google to verify it and restore it on your other devices. RevenueCat receives an anonymous app-generated user ID and your purchase history; it does not receive your name, email or payment details. RevenueCat’s policy: <a href="https://www.revenuecat.com/privacy" rel="noopener">https://www.revenuecat.com/privacy</a></p>
+    </div>
+
+    <div class="service">
+      <h3>Apple App Store / Google Play <span>· payments</span></h3>
+      <p>Payment is handled entirely by Apple or Google under their own privacy policies. We never see your card details.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#ff5a6e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/></svg></span>Children</h2>
+    <p>Orbit Hop is not directed at children under 13, and we do not knowingly collect personal information from them.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#4fe3d0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M4 17h6M18 7h2M14 17h6"/><circle cx="16" cy="7" r="2.2"/><circle cx="12" cy="17" r="2.2"/></svg></span>Your choices</h2>
+    <ul class="choices">
+      <li>Remove interstitial ads with the one-time “Remove Ads” purchase.</li>
+      <li>Opt out of personalized ads via your device’s ad settings or the in-app consent prompt where shown.</li>
+      <li>Delete all locally stored data by uninstalling the app.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#ffc94d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v5h-5"/></svg></span>Changes</h2>
+    <p>We will update this page when the policy changes and update the date above.</p>
+  </section>
+
+  <section class="card contact">
+    <h2 style="justify-content:center"><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#ffc94d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M4 8l8 6 8-6"/></svg></span>Contact</h2>
+    <p>Questions about this policy? We’re happy to help.</p>
+    <a class="btn" href="mailto:orbithopsupport@gmail.com">orbithopsupport@gmail.com</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Shawn Mazyck · NextPlay Games · <a href="https://apps.apple.com/app/orbit-hop-space-arcade/id6827165891">Orbit Hop on the App Store</a></p>
+  </footer>
+</main>
+</body>
+</html>
